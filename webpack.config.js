@@ -1,13 +1,12 @@
 const path = require('path');
-var dotenv = require('dotenv').config({path: __dirname + '/.env'});
 
 module.exports = {
   entry: {
-    js:'./src/app.js',
-    css:'./src/scss/app.scss'
+    script:'./src/app.js',
+    style:'./src/scss/app.scss'
   },
   output: {
-    filename: 'bundle.[name]',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   watch: true,
